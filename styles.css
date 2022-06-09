@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.librarydisplay {
+    width: 70%;
+    float: left;
+    height: 100vh;
+}
+
+.newbook {
+    float: left;
+    background-color: antiquewhite;
+    padding: 10px;
+    width: 30%;
+}
+
+.card {
+    background-color: aqua;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+}
