@@ -11,7 +11,15 @@ Book.prototype.info = function () {
   return `${this.name} by ${this.author}, ${this.pages} pages, ${this.read}`
 }
 
-const bookie = new Book("lotr", "jrr", 300, "unread");
+Book.prototype.readBook = function () {
+  if (this.read == "Read") {
+    this.read = "Unread";
+  } else {
+    this.read = "Read";
+  }
+}
+
+const bookie = new Book("Example book", "An incredible author", 300, "Unread");
 library.push(bookie);
 //console.log(bookie.info())
 
@@ -30,12 +38,12 @@ function updateLibrary () {
     <div>
     <p>Title: ${element.name}</p>
     <p>Author: ${element.author}</p>
-    <p>Pagecount: ${element.pages}</p>
+    <p>Pages: ${element.pages}</p>
     <p>Read: ${element.read}</p>
     </div>
     <div class="buttons">
      <button class="delete" data-index="${bookCount}">Delete</button>
-     <button class="readtoggle">Read/Unread</button>
+     <button class="readtoggle" data-index="${bookCount}">Read/Unread</button>
     </div>
     `
     libraryDisplay.appendChild(card);
@@ -52,7 +60,7 @@ function updateLibrary () {
   let readButtons = document.querySelectorAll('.readtoggle');
   readButtons.forEach((button) => {
     button.addEventListener('click', ()=> {
-      toggleRead();
+      toggleRead(button.getAttribute("data-index"));
     }); 
   });
 }
@@ -66,7 +74,7 @@ addButton.addEventListener('click', () => {
 });
 
 function addBookToLibrary() {
-  let book = new Book(document.querySelector('#title').value,document.querySelector('#author').value,document.querySelector('#pagecount').value,document.querySelector('#readbool').value);
+  let book = new Book(document.querySelector('#title').value,document.querySelector('#author').value,document.querySelector('#pagecount').value,document.querySelector('input[name=inputType]:checked').value);
   //console.log(book.info);
   library.push(book);
   //console.log(library);
@@ -78,6 +86,8 @@ function deleteBook(target) {
   updateLibrary();
 }
 
-function toggleRead() {
+function toggleRead(target) {
   console.log("read!");
+  library[target].readBook();
+  updateLibrary();
 }

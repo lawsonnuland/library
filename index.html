@@ -9,17 +9,18 @@
 </head>
 <body>
     <div class="header">
-        <h3>Welcome to your library!</h3>
+        <h1>Welcome to your library!</h1>
     </div>
     <div class="container">
         <div class="librarydisplay">
 
         </div>
         <div class="newbook">
-            <input id="title">
-            <input id="author">
-            <input id="pagecount">
-            <input type="checkbox" id="readbool">
+            <label for="title">Title: <input id="title"></label> <br>
+            <label for="author">Author: <input id="author"></label> <br>
+            <label for="pagecount">Pagecount: <input id="pagecount" type="number" min="1"></label> <br>
+            <label for="Unread"><input type="radio" name="inputType" value="Unread" id="hover" checked>Unread</label>
+            <label for="Read"><input type="radio" name="inputType" value="Read">Read</label> <br>
             <button id="addbook">Add book</button>
         </div>
     </div>    

@@ -1,10 +1,23 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: blanchedalmond;
+    background-color: #f8fafc;
+}
+
+.header {
+    height: auto;
+    align-self: center;
+}
+
+h1 {
+    text-align: center;
+    align-self: center;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .container {
@@ -17,28 +30,51 @@ body {
     height: 100vh;
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     overflow: scroll;
+    padding: 10px;
+    background-color: #e2e8f0;
 }
 
 .newbook {
     float: left;
-    background-color: antiquewhite;
+    background-color: #cbd5e1;
     padding: 10px;
     width: 30%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.newbook > * {
+    padding-bottom: 5px;
 }
 
 .card {
-    background-color: aqua;
+    background-color: #94a3b8;
     padding: 10px;
     border-radius: 10px;
-    height: 68px;
+    min-height: 68px;
     display: flex;
     justify-content: space-between;
+    box-shadow: 5px 5px 5px rgb(0,0,0,.2);
 }
 
 .buttons {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+button {
+    border: 0px;
+    border-radius: 5px;
+    padding: 3px;
+    align-self: center;
+}
+
+.delete {
+    background-color: lightcoral;
+}
+
+label {
+    padding-top: 5px;
 }
