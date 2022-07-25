@@ -1,27 +1,28 @@
 let library = [];
 
-function Book(name, author, pages, read) {
-  this.name = name
-  this.author = author
-  this.pages = pages
-  this.read = read
-}
+class Book {
+  constructor(name, author, pages, read) {
+    this.name = name
+    this.author = author
+    this.pages = pages
+    this.read = read
+  }
 
-Book.prototype.info = function () {
-  return `${this.name} by ${this.author}, ${this.pages} pages, ${this.read}`
-}
+  info() {
+    return `${this.name} by ${this.author}, ${this.pages} pages, ${this.read}`
+  }
 
-Book.prototype.readBook = function () {
-  if (this.read == "Read") {
-    this.read = "Unread";
-  } else {
-    this.read = "Read";
+  readBook() {
+    if (this.read == "Read") {
+      this.read = "Unread";
+    } else {
+      this.read = "Read";
+    }
   }
 }
 
 const bookie = new Book("Example book", "An incredible author", 300, "Unread");
 library.push(bookie);
-//console.log(bookie.info())
 
 //Displaying the library
 const libraryDisplay = document.querySelector('.librarydisplay');
@@ -75,9 +76,7 @@ addButton.addEventListener('click', () => {
 
 function addBookToLibrary() {
   let book = new Book(document.querySelector('#title').value,document.querySelector('#author').value,document.querySelector('#pagecount').value,document.querySelector('input[name=inputType]:checked').value);
-  //console.log(book.info);
   library.push(book);
-  //console.log(library);
   updateLibrary();
 }
 
