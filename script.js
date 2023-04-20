@@ -49,7 +49,8 @@ function updateLibrary () {
     card.setAttribute("data-index", bookCount);
     card.innerHTML = `
     <div>
-    <p>Title: ${element.name}</p>
+    <h3> ${element.name}</h3>
+    <hr>
     <p>Author: ${element.author}</p>
     <p>Pages: ${element.pages}</p>
     <p>Read: ${element.read}</p>

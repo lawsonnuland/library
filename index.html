@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>Welcome to your library!</h1>
+        <h1>Welcome to Your Library</h1>
         <div class="libbuttons">
             <button id="savelib">Save</button>
             <button id="showall">Show All</button>
@@ -23,12 +23,15 @@
 
         </div>
         <div class="newbook">
-            <label for="title">Title: <input id="title" placeholder="Great Book"></label> <br>
-            <label for="author">Author: <input id="author" placeholder="Word Smith"></label> <br>
-            <label for="pagecount">Pagecount: <input id="pagecount" type="number" min="1" placeholder="150"></label> <br>
-            <label for="Unread"><input type="radio" name="inputType" value="Unread" id="hover" checked>Unread</label>
-            <label for="Read"><input type="radio" name="inputType" value="Read">Read</label> <br>
-            <button id="addbook">Add book</button>
+            <div class="input-display">
+                <label for="title">Title: <input id="title" placeholder="Great Book" required></label> <br>
+                <label for="author">Author: <input id="author" placeholder="Word Smith" required></label> <br>
+                <label for="pagecount">Pagecount: <input id="pagecount" type="number" min="1" placeholder="150" required></label> <br>
+                <label for="Unread"><input type="radio" name="inputType" value="Unread" id="hover" checked>Unread</label>
+                <label for="Read"><input type="radio" name="inputType" value="Read">Read</label> <br>
+                <button id="addbook">Add book</button>
+            </div>
+            
         </div>
     </div>    
     <script src="script.js"></script>

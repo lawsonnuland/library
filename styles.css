@@ -13,6 +13,7 @@ body {
     height: auto;
     align-items: center;
     padding: 10px;
+    background-color: rgb(137, 137, 224);
 }
 
 .libbuttons {
@@ -37,7 +38,7 @@ h1 {
     text-align: center;
     align-self: center;
     padding: 10px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .container {
@@ -53,12 +54,13 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     overflow: scroll;
     padding: 10px;
-    background-color: #e2e8f0;
+    background-color: #163864;
 }
 
 .newbook {
     float: left;
-    background-color: #cbd5e1;
+    background-image: url(img/wood-grain.jpg);
+    background-size: contain;
     padding: 10px;
     width: 30%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -70,12 +72,12 @@ h1 {
 }
 
 .card {
-    background-color: #94a3b8;
+    background-color: #FCF5E5;
     padding: 10px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
-    box-shadow: 5px 5px 5px rgb(0,0,0,.2);
+    box-shadow: 5px 5px 5px rgb(0,0,0,.5);
     max-width: 300px;
 }
 
@@ -83,6 +85,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 button {
@@ -98,4 +101,20 @@ button {
 
 label {
     padding-top: 5px;
+    margin-top: 5px;
+    
+}
+
+.input-display {
+    padding: 3px;
+    border-radius: 2px;
+    background-color: rgba(200,200, 200, .7);
+}
+
+input {
+    border-radius: 2px;
+}
+
+input:invalid {
+    border: solid red 2px;
 }
